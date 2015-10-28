@@ -288,7 +288,7 @@ namespace detail
 	template <typename textureType, typename retType, typename T, precision P, template <typename, precision> class vecType>
 	struct convertFunc<textureType, retType, T, P, vecType, CONVERT_MODE_HALF, true>
 	{
-		typedef accessFunc<textureType, vecType<u16, P> > access;
+		typedef accessFunc<textureType, vecType<uint16, P> > access;
 
 		static tvec4<retType, P> fetch(textureType const & Texture, typename textureType::texelcoord_type const & TexelCoord, typename textureType::size_type Layer, typename textureType::size_type Face, typename textureType::size_type Level)
 		{
